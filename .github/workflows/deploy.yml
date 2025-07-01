@@ -1,35 +1,41 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main  # 如果你用的是 master，這裡改成 master
+    push:
+        branches:
+            - main  # 如果你用的是 master，這裡改成 master
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+    contents: read
+    pages: write
+    id-token: write
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v4
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+    
+            - name: Checkout source code
+              uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+            - name: Setup Git
+              run: |
+                git config --global user.name "github-actions[bot]"
+                git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Install dependencies
-        run: npm install
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: 18
 
-      - name: Build the app
-        run: npm run build
+            - name: Install dependencies
+              run: npm install
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist   # 如果是 CRA 改成 ./build
+            - name: Build the app
+              run: npm run build
+
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: ./dist   # 如果是 CRA 改成 ./build
