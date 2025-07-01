@@ -1,0 +1,24 @@
+.button {
+    border: 2px solid currentColor;
+    background-color: transparent;
+    color: currentColor;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: default;
+    font-weight: bold;
+    font-size: 1rem;
+
+    outline: none;
+    box-shadow: none;
+    transition: none;
+}
+
+/* 移除 focus, active, hover 狀態的任何外框、陰影或顏色變化 */
+.button:focus,
+.button:active,
+.button:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: currentColor !important;
+    background-color: transparent !important;
+}

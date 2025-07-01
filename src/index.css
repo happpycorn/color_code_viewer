@@ -2,15 +2,29 @@
     box-sizing: border-box;
 }
 
-html, body {
+html, body, #root {
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: system-ui, sans-serif;
-    background-color: #fafafa;
-    color: #111;
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 :root {
-    --primary-color: #0070f3;
-    --gray: #888;
+
+    --color-bg: #fff;
+    --color-panel: #fff;
+    --color-text: #000;
+    --color-border: #000;
+
+    --font-main: Arial, sans-serif;
+    /* --font-main: system-ui, sans-serif; */
+
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+
+    --radius: 4px;
+    --element-radiu: 8px;
 }

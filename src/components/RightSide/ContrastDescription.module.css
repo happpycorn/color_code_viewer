@@ -1,0 +1,21 @@
+.background {
+    flex: 1;
+    padding: 2rem;
+    display: flex;          /* 必須有這行 */
+    align-items: center;    /* 垂直置中 */
+    justify-content: center;/* 水平置中 */
+    text-align: center;     /* 文字置中 */
+}
+
+.contrast_info {
+    flex: 1;
+    /* 也可以設定 display flex，但非必要 */
+}
+
+.contrast_info p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    user-select: text; /* 允許文字被選取 */
+    /* 文字置中靠父元素的 text-align 就可以了 */
+}

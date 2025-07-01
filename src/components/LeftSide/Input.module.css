@@ -1,0 +1,54 @@
+.color_input {
+    border: 1px solid var(--color-border);
+    border-radius: var(--element-radiu);
+    background-color: var(--color-panel);
+    padding: 1rem;
+}
+
+.color_input legend {
+    font-weight: bold;
+    margin-left: -0.35rem;
+    padding: 0.2rem 0.3rem;
+}
+
+.color_input label {
+    display: inline-block;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    text-align: left;
+    width: 1rem;
+}
+
+.color_input input[type="number"] {
+    width: 4.5rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: 4px;
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+    box-sizing: border-box;
+}
+
+.color_input input[type="text"] {
+    width: 6rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: 4px;
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+    box-sizing: border-box;
+}
+
+.color_input input[type="number"]:focus,
+.color_input input[type="text"]:focus {
+    outline: none;
+    border-color: #000; /* 藍色邊框表示 focus */
+    box-shadow: 0 0 3px #00000066;
+}
+
+.legendHex {
+    width: 2.5rem !important;
+}

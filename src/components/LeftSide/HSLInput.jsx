@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { rgbToHsl, hslToRgb } from '../../utils/convert'
+import styles from './Input.module.css'
 
 export default function HSLInput({ rgb, setRgb }) {
     const [hsl, setHsl] = useState(rgbToHsl(rgb))
@@ -32,7 +33,7 @@ export default function HSLInput({ rgb, setRgb }) {
     }, [rgb])
 
     return (
-        <fieldset className="color_input">
+        <fieldset className={styles.color_input}>
             <legend>HSL</legend>
             <label htmlFor="h-input">H</label>
             <input

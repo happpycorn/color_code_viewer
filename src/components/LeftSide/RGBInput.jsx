@@ -1,3 +1,5 @@
+import styles from './Input.module.css'
+
 export default function RGBInput({ rgb, setRgb }) {
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -6,7 +8,7 @@ export default function RGBInput({ rgb, setRgb }) {
     }
 
   return (
-        <fieldset className="color_input">
+        <fieldset className={styles.color_input}>
             <legend>RGB</legend>
             <label htmlFor="r-input">R</label>
             <input

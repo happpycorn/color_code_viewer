@@ -1,18 +1,12 @@
-// 一個可重用的按鈕元件，背景和文字色由 props 控制
-export default function ExampleButton({ backgroundColor, color, children }) {
-  return (
-    <button
-      style={{
-        backgroundColor,
-        color,
-        padding: '0.5rem 1rem',
-        border: 'none',
-        borderRadius: '4px',
-        cursor: 'pointer',
-        fontWeight: 'bold',
-      }}
-    >
-      {children}
-    </button>
-  )
+import styles from './ExampleButton.module.css'
+
+export default function ExampleButton({ color, children }) {
+    return (
+        <button
+            className={styles.button}
+            style={{ color }}
+        >
+            {children}
+        </button>
+    )
 }

@@ -65,7 +65,7 @@ export function hslToRgb({ h, s, l }) {
 
 export function rgbToHex({ r, g, b }) {
     const toHex = (v) => v.toString(16).padStart(2, '0')
-    return `#${toHex(r)}${toHex(g)}${toHex(b)}`
+    return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase()
 }
 
 export function hexToRgb(hex) {

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { rgbToHex, hexToRgb } from '../../utils/convert'
+import styles from './Input.module.css'
 
 export default function HEXInput({ rgb, setRgb }) {
     const [hex, setHex] = useState(rgbToHex(rgb))
@@ -25,9 +26,9 @@ export default function HEXInput({ rgb, setRgb }) {
     }
 
   return (
-        <fieldset className="color_input">
+        <fieldset className={styles.color_input}>
             <legend>HEX</legend>
-            <label htmlFor="hex-input">HEX</label>
+            <label htmlFor="hex-input" className={styles.legendHex}>HEX</label>
             <input
                 id="hex-input"
                 type="text"

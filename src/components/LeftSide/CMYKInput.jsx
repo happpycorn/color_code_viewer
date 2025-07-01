@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import styles from './Input.module.css'
 
 // CMYK <-> RGB 轉換簡單公式
 
@@ -47,7 +48,7 @@ export default function CMYKInput({ rgb, setRgb }) {
     }
 
     return (
-        <fieldset className="color_input">
+        <fieldset className={styles.color_input}>
             <legend>CMYK</legend>
             <label htmlFor="c-input">C</label>
             <input

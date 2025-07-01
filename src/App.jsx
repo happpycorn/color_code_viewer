@@ -9,18 +9,16 @@ export default function App() {
 	const [rgb, setRgb] = useState({ r: 255, g: 255, b: 255 })
 
 	return (
-		<div className={styles.container}>
-			<h1 className={styles.title}>Title</h1>
 			<div className={styles.wrapper}>
 				<div className={styles.left_side}>
+					<h1 className={styles.title}>Color Code Viewer</h1>
 					<LeftSide rgb={rgb} setRgb={setRgb} />
 				</div>
 				<div className={styles.right_side}>
 					<ContrastWhite rgb={rgb} />
-					<ContrastDescription />
+					<ContrastDescription rgb={rgb}/>
 					<ContrastBlack rgb={rgb} />
 				</div>
 			</div>
-		</div>
 	)
 }
